@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 // Load User model
 const User = require("../../models/User");
@@ -51,7 +52,7 @@ router.post("/register", (req, res) => {
 // @access  Public
 router.post("/login", (req, res) => {
   const email = req.body.email;
-  const pasword = req.body.password;
+  const password = req.body.password;
 
   // Find user by email
   User.findOne({ email }).then(user => {
@@ -64,7 +65,7 @@ router.post("/login", (req, res) => {
       if (isMatch) {
         res.json({ msg: "Success" });
       } else {
-        return res.status(400).json({ msg: "Password incorrect" });
+        return res.status(400).json({ password: "Password incorrect" });
       }
     });
   });

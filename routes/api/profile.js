@@ -236,7 +236,7 @@ router.post(
 // @route   DELETE api/profile/experience
 // @desc    Deleyte experience from profile
 // @access  Private
-router.post(
+router.delete(
   "/experience/:exp_id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
@@ -253,7 +253,7 @@ router.post(
         // Save
         profile.save().then(profile => res.json(profile));
       })
-      .caatch(err => res.status(404).json(err));
+      .catch(err => res.status(404).json(err));
   }
 );
 

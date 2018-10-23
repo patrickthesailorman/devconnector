@@ -21,6 +21,14 @@ router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
+    const { errors, isValid } = validatePostInput(req.body);
+
+    // Check Validation
+    if (!isValid) {
+      // If any errors, send 400 with errrors object
+      return res.status(400).json(errors);
+    }
+
     const newPost = new Post({
       text: req.body.text,
       name: req.body.name,

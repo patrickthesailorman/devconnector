@@ -3,6 +3,12 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
 
+// Post model
+const Post = require("../../models/Post");
+
+// Validation
+const validatePostInput = require("../../validation/post");
+
 // @route   GET api/posts/test
 // @desc    Tests post route
 // @access  Public

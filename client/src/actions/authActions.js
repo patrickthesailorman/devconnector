@@ -2,7 +2,7 @@ import axios from "axios";
 import { GET_ERRORS } from "./types";
 
 // Register User
-export const registeruser = (userData, history) => dispatch => {
+export const registerUser = (userData, history) => dispatch => {
   axios
     .post("/api/users/register", userData)
     .then(res => history.push("/login"))

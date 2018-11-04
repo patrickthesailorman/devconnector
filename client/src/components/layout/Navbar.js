@@ -60,6 +60,7 @@ class Navbar extends Component {
                 </Link>
               </li>
             </ul>
+            {isAuthenticated ? authLinks : guestLinks}
           </div>
         </div>
       </nav>

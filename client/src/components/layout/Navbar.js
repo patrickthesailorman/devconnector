@@ -5,7 +5,37 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 
 class Navbar extends Component {
+  onLogoutClick(e) {
+    e.preventDefault();
+    this.props.logoutUser();
+  }
   render() {
+    const { isAuthenticated, user } = this.props.auth;
+
+    const authLinks = (
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <a
+            href="#"
+            onClick={this.onLogoutClick.bind(this)}
+            className="nav-linkl"
+          />
+        </li>
+      </ul>
+    );
+
+    const guestLinks = (
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <a
+            href="#"
+            onClick={this.onLogoutClick.bind(this)}
+            className="nav-linkl"
+          />
+        </li>
+      </ul>
+    );
+
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
@@ -27,19 +57,6 @@ class Navbar extends Component {
                 <Link className="nav-link" to="/profiles">
                   {" "}
                   Developers
-                </Link>
-              </li>
-            </ul>
-
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/register">
-                  Sign Up
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/login">
-                  Login
                 </Link>
               </li>
             </ul>

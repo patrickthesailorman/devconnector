@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
-import authReducer from "../../reducers/authReducer";
 
 class Landing extends Component {
   componentDidMount() {
@@ -44,7 +43,7 @@ Landing.propTypes = {
   auth: PropTypes.object.isRequired
 };
 
-const mapoStateToProps = state => ({
+const mapStateToProps = state => ({
   auth: state.auth
 });
 

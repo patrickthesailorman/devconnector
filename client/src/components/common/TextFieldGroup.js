@@ -3,7 +3,7 @@ import classnames from "classnames";
 import propTypes from "prop-types";
 
 const TextFieldGroup = ({
-  mame,
+  name,
   placeholder,
   value,
   label,
@@ -16,18 +16,31 @@ const TextFieldGroup = ({
   return (
     <div className="form-group">
       <input
-        type="email"
+        type={type}
         className={classnames("form-control form-control-lg", {
-          "is-invalid": errors.email
+          "is-invalid": error
         })}
-        placeholder="Email Address"
-        name="email"
-        value={this.state.email}
-        onChange={this.onChange}
+        placeholder={placeholder}
+        name={name}
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
       />
-      {errors.email && <div className="invalid-feedback">{errors.email} </div>}
+      {info && <small className="from-text text-muted">{info}</small>}
+      {error && <div className="invalid-feedback">{error} </div>}
     </div>
   );
+};
+
+TextFieldGroup.proptypes = {
+  name: propTypes.string.isRequired,
+  placeholder: propTypes.string,
+  value: propTypes.string.isRequired,
+  info: propTypes.string,
+  error: propTypes.string,
+  type: propTypes.string.isRequired,
+  onChange: propTypes.string.isRequired,
+  disabled: propTypes.string
 };
 
 export default TextFieldGroup;

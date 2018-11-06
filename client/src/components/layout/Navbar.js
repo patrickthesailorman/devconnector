@@ -18,7 +18,7 @@ class Navbar extends Component {
           <a
             href=""
             onClick={this.onLogoutClick.bind(this)}
-            className="nav-linkl"
+            className="nav-link"
           >
             <img
               className="rounded-circle"
@@ -35,7 +35,16 @@ class Navbar extends Component {
 
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
-        <li className="nav-item" />
+        <li className="nav-item">
+          <Link className="nav-link" to="/register">
+            Sign Up
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/login">
+            Login
+          </Link>
+        </li>
       </ul>
     );
 
@@ -73,7 +82,7 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isrequired
+  auth: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({

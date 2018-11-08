@@ -31,6 +31,12 @@ class CreateProfile extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  onSubmit(e) {
+    e.preventDefault();
+
+    console.log("submit");
+  }
+
   render() {
     const { errors } = this.state;
     return (

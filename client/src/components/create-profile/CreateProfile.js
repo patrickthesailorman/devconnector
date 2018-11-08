@@ -37,6 +37,10 @@ class CreateProfile extends Component {
     console.log("submit");
   }
 
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
   render() {
     const { errors } = this.state;
     return (

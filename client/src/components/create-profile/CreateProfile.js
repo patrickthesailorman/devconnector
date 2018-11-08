@@ -26,9 +26,13 @@ class CreateProfile extends Component {
       instagram: "",
       errors: {}
     };
+
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   render() {
+    const { errors } = this.state;
     return (
       <div className="create-profile">
         <div className="conatiner">

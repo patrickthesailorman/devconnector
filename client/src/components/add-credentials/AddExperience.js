@@ -29,7 +29,17 @@ class AddExperience extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    console.log("submit");
+    const expData = {
+      company: this.state.company,
+      title: this.state.title,
+      location: this.state.location,
+      from: this.state.from,
+      to: this.state.to,
+      current: this.state.current,
+      description: this.state.description
+    };
+
+    this.props.addExperience(expData, this.props.history);
   }
 
   onChange(e) {

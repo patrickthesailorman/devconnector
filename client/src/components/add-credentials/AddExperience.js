@@ -25,6 +25,16 @@ class AddExperience extends Component {
     this.onCheck = this.onCheck.bind(this);
   }
 
+  onSubmit(e) {
+    e.preventDefault();
+
+    console.log("submit");
+  }
+
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
   render() {
     const { errors } = this.state;
 

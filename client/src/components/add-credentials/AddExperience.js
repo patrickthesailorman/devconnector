@@ -89,6 +89,19 @@ class AddExperience extends Component {
                   <label htmlFor="current" className="form-check-label">
                     Current Job
                   </label>
+                  <TextAreaFieldGroup
+                    placeholder="Job Description"
+                    name="description"
+                    value={this.state.description}
+                    onChange={this.onChange}
+                    error={errors.description}
+                    info="Tell us about the the position"
+                  />
+                  <input
+                    type="submit"
+                    value="Submit"
+                    className="btn btn-info btn-block mt-4"
+                  />
                 </div>
               </form>
             </div>

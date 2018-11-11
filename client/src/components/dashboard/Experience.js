@@ -6,6 +6,10 @@ import Moment from "react-moment";
 import { deleteExperience } from "../../actions/profileActions";
 
 class Experience extends Component {
+  onDeleteClick(id) {
+    this.props.deleteExperience(id);
+  }
+
   render() {
     const experience = this.props.experience.map(exp => (
       <tr key={exp._id}>
@@ -20,7 +24,12 @@ class Experience extends Component {
           )}
         </td>
         <td>
-          <button className="btn btn-danger">Delete</button>
+          <button
+            onClick={(this.onDeleteClick.bind(this), exp._id)}
+            className="btn btn-danger"
+          >
+            Delete
+          </button>
         </td>
       </tr>
     ));
@@ -50,4 +59,4 @@ Experience.propTypes = {
 export default connect(
   null,
   { deleteExperience }
-)(withRouter(Experience));
+)(Experience);

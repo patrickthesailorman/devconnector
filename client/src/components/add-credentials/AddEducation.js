@@ -81,21 +81,21 @@ class AddEducation extends Component {
                   name="school"
                   value={this.state.school}
                   onChange={this.onChange}
-                  error={errors.company}
+                  error={errors.school}
                 />
                 <TextFieldGroup
                   placeholder="* Degree or Certification"
                   name="degree"
                   value={this.state.degree}
                   onChange={this.onChange}
-                  error={errors.title}
+                  error={errors.degree}
                 />
                 <TextFieldGroup
                   placeholder="* Field of Study"
                   name="fieldofstudy"
                   value={this.state.fieldofstudy}
                   onChange={this.onChange}
-                  error={errors.location}
+                  error={errors.fieldofstudy}
                 />
                 <h6>From Date</h6>
                 <TextFieldGroup
@@ -125,7 +125,7 @@ class AddEducation extends Component {
                     id="current"
                   />
                   <label htmlFor="current" className="form-check-label">
-                    Current Job
+                    Current Program
                   </label>
                   <TextAreaFieldGroup
                     placeholder="Program Description"

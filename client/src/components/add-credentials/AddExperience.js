@@ -26,6 +26,13 @@ class AddExperience extends Component {
   }
 }
 
+AddExperience.propTypes = {
+  profile: PropTypes.object,
+  isrequired,
+  errors: PropTypes.object,
+  isrequired
+};
+
 const maopStateToProps = state => ({
   profile: state.profile,
   errors: state.errors

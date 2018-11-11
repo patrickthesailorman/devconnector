@@ -36,6 +36,7 @@ class AddExperience extends Component {
               <p className="lead text-center">
                 Add any job or position that you have had in the past or current
               </p>
+              <small className="d-block pb-3">* = required fields</small>
             </div>
           </div>
         </div>
@@ -45,13 +46,11 @@ class AddExperience extends Component {
 }
 
 AddExperience.propTypes = {
-  profile: PropTypes.object,
-  isrequired,
-  errors: PropTypes.object,
-  isrequired
+  profile: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
 };
 
-const maopStateToProps = state => ({
+const mapStateToProps = state => ({
   profile: state.profile,
   errors: state.errors
 });

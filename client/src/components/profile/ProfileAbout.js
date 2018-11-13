@@ -4,6 +4,10 @@ import isEmpty from "../../validation/is-empty";
 
 class ProfileAbout extends Component {
   render() {
+    const { profile } = this.props;
+
+    // Get first name
+    const firstName = profile.user.name.trim().split(" ")[0];
     return (
       <div class="row">
         <div class="col-md-12">

@@ -37,6 +37,17 @@ class ProfileHeader extends Component {
                     <i className="fas fa-globe fa-2x" />
                   </a>
                 )}
+
+                {isEmpty(profile.social && profile.social.twitter) ? null : (
+                  <a
+                    className="text-white p-2"
+                    href={profile.social.twitter}
+                    target="_blank"
+                  >
+                    <i className="fab fa-twitter fa-2x" />
+                  </a>
+                )}
+
                 <a className="text-white p-2" href="#">
                   <i className="fab fa-twitter fa-2x" />
                 </a>

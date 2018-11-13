@@ -16,6 +16,9 @@ class ProfileCreds extends Component {
         <p>
           {exp.location ==='' ? null : (<span><strong>Location: </strong> {exp.location}</span>)}
         </p>
+        <p>
+        {exp.description ==='' ? null : (<span><strong>Description: </strong> {exp.description}</span>)}
+        </p>
       </li>
     ));
     return (

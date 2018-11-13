@@ -8,16 +8,17 @@ class ProfileAbout extends Component {
 
     // Get first name
     const firstName = profile.user.name.trim().split(" ")[0];
+
     return (
       <div class="row">
         <div class="col-md-12">
           <div class="card card-body bg-light mb-3">
-            <h3 class="text-center text-info">John's Bio</h3>
+            <h3 class="text-center text-info">
+              {firstName}
+              's Bio
+            </h3>
             <p class="lead">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Provident fuga cum necessitatibus blanditiis vel, officia facere
-              porro esse numquam assumenda doloremque saepe aliquam nemo
-              excepturi aliquid maiores! Excepturi, libero repudiandae.
+              {isEmpty(profile.bio) ? null : <span>{profile.bio}</span>}
             </p>
             <hr />
             <h3 class="text-center text-info">Skill Set</h3>

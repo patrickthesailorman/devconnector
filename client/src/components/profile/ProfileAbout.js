@@ -31,21 +31,7 @@ class ProfileAbout extends Component {
             <h3 class="text-center text-info">Skill Set</h3>
             <div class="row">
               <div class="d-flex flex-wrap justify-content-center align-items-center">
-                <div class="p-3">
-                  <i class="fa fa-check" /> HTML
-                </div>
-                <div class="p-3">
-                  <i class="fa fa-check" /> CSS
-                </div>
-                <div class="p-3">
-                  <i class="fa fa-check" /> JavaScript
-                </div>
-                <div class="p-3">
-                  <i class="fa fa-check" /> Python
-                </div>
-                <div class="p-3">
-                  <i class="fa fa-check" /> C#
-                </div>
+                {skills}
               </div>
             </div>
           </div>

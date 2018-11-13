@@ -12,6 +12,10 @@ class ProfileCreds extends Component {
           <Moment format="YYYY/MM/DD">{exp.from}</Moment> - 
           {exp.to === nul ? (' Now') : (<Moment format="YYYY/MM/DD">{exp.to}</Moment>)}
         </p>
+        <p><strong>Position: </strong> {exp.title}</p>
+        <p>
+          {exp.location ==='' ? null : (<span><strong>Location: </strong> {exp.location}</span>)}
+        </p>
       </li>
     ));
     return (

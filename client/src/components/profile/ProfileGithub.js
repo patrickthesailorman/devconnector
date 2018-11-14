@@ -40,6 +40,7 @@ class ProfileGithub extends Component {
                 {repo.name}
               </Link>
             </h4>
+            <p>{repo.description}</p>
           </div>
         </div>
       </div>

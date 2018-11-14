@@ -29,6 +29,8 @@ class ProfileGithub extends Component {
   }
 
   render() {
+    const { repos } = this.state;
+
     return (
       <div>
         <h1>TODO: PROFILE GITHUB</h1>

@@ -49,6 +49,9 @@ class ProfileGithub extends Component {
             <span className="badge badge-info mr-1">
               Watchers: {repo.watchers_count}
             </span>
+            <span className="badge badge-info mr-1">
+              Forks: {repo.forks_count}
+            </span>
           </div>
         </div>
       </div>

@@ -5,6 +5,8 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-  default:
-  return state;
+  switch (action.type) {
+    default:
+      return state;
+  }
 }

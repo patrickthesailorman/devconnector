@@ -15,6 +15,13 @@ class PostForm extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+
+  onSubmit(e) {
+    e.preventDefault();
+
+    console.log("submit");
+  }
+
   render() {
     return (
       <div className="post-form mb-3">

@@ -22,6 +22,10 @@ class PostForm extends Component {
     console.log("submit");
   }
 
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
   render() {
     return (
       <div className="post-form mb-3">

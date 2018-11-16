@@ -27,6 +27,8 @@ class PostForm extends Component {
   }
 
   render() {
+    const { errors } = this.state;
+
     return (
       <div className="post-form mb-3">
         <div className="card card-info">

@@ -55,4 +55,7 @@ class PostForm extends Component {
   }
 }
 
-export default PostForm;
+export default connect(
+  mapStatetoProps,
+  { addPost }
+)(PostForm);

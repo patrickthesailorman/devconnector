@@ -18,7 +18,7 @@ class PostForm extends Component {
         <div className="card card-info">
           <div className="card-header bg-info text-white">Say Somthing...</div>
           <div className="card-body">
-            <form>
+            <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <TextAreaFieldGroup
                   placeholder="Create a post"

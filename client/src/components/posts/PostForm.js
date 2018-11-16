@@ -55,6 +55,11 @@ class PostForm extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
 export default connect(
   mapStatetoProps,
   { addPost }

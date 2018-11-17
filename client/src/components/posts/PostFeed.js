@@ -8,4 +8,8 @@ class PostFeed extends Component {
   }
 }
 
+PostFeed.propTypes = {
+  posts: PropTypes.array.isRequired
+};
+
 export default PostFeed;

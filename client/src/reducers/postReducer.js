@@ -12,8 +12,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         loading: true
-      }
-  switch (action.type) {
+      };
     case ADD_POST:
       return {
         ...state,

@@ -82,6 +82,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(
-  mapStatetoProps,
+  mapStateToProps,
   { addPost }
 )(PostForm);

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import PostForm from "./PostForm";
 import Spinner from "../common/Spinner";
+import { getPosts } from "../../actions/postActions";
 
 class Posts extends Component {
   render() {
@@ -29,4 +30,7 @@ const mapStateToProps = state => ({
   post: state.post
 });
 
-export default connect(mapStateToProps)(Posts);
+export default connect(
+  mapStateToProps,
+  { getPosts }
+)(Posts);

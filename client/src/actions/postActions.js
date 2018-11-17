@@ -22,7 +22,7 @@ export const addPost = postData => dispatch => {
 
 // Get Posts
 export const getPosts = () => dispatch => {
-  dispatch(setPostLoadng);
+  dispatch(setPostLoading());
   axios
     .get("/api/posts")
     .then(res =>

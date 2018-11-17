@@ -20,6 +20,12 @@ class PostForm extends Component {
     e.preventDefault();
 
     const { user } = this.props.auth;
+
+    const newPost = {
+      text: this.state.text,
+      name: user.name,
+      avatar: user.avatar
+    };
   }
 
   onChange(e) {

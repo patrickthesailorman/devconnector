@@ -51,7 +51,11 @@ class PostItem extends Component {
               type="button"
               className="btn btn-light mr-1"
             >
-              <i className="text-info fas fa-thumbs-up" />
+              <i
+                className={classnames("fas fa-thumbs-up", {
+                  "text-info": this.findUserLike(post.likes)
+                })}
+              />
               <span className="badge badge-light">{post.likes.length}</span>
             </button>
             <button

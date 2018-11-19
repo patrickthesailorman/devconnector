@@ -65,4 +65,7 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps)(PostItem);
+export default connect(
+  mapStateToProps,
+  { deletePost }
+)(PostItem);

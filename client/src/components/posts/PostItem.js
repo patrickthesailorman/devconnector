@@ -57,6 +57,8 @@ class PostItem extends Component {
 
 PostItem.propTypes = {
   deletePost: PropTypes.func.isRequired,
+  addLike: PropTypes.func.isRequired,
+  removelike: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired
 };
@@ -67,5 +69,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { deletePost }
+  { deletePost, addLike, removelike }
 )(PostItem);

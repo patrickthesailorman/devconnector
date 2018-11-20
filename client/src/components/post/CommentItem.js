@@ -9,4 +9,7 @@ class CommentItem extends Component {
   }
 }
 
-export default connect()(CommentItem);
+export default connect(
+  mapStateToProps,
+  { deleteComment }
+)(CommentItem);

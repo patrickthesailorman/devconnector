@@ -19,14 +19,10 @@ class CommentItem extends Component {
               />
             </a>
             <br />
-            <p className="text-center">Kevin Smith</p>
+            <p className="text-center">{comment.name}</p>
           </div>
           <div className="col-md-10">
-            <p className="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              possimus corporis sunt necessitatibus! Minus nesciunt soluta
-              suscipit nobis.
-            </p>
+            <p className="lead">{comment.text}</p>
           </div>
         </div>
       </div>

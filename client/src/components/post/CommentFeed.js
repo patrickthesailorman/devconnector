@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 class CommentFeed extends Component {
   render() {
-    const { comments,postId } = this.props;
+    const { comments, postId } = this.props;
 
-    return (
-      
-    ) 
+    return comments.map(comment => (
+      <CommentItem key={comment._id} comment={comment} postId={postId} />
+    ));
   }
 }
 

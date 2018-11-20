@@ -5,6 +5,8 @@ import { deleteComment } from "../../actions/postActions";
 
 class CommentItem extends Component {
   render() {
+    const { comment, postId, auth } = this.props;
+
     return <div />;
   }
 }

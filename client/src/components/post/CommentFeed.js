@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 
 class CommentFeed extends Component {
   render() {
-    return <div />;
+    const { comments,postId } = this.props;
+
+    return (
+      
+    ) 
   }
 }
 

@@ -13,6 +13,13 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
+CommentItem.propTypes = {
+  deleteComment: PropTypes.func.isRequired,
+  comment: PropTypes.object.isRequired,
+  postId: PropTypes.string.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
 export default connect(
   mapStateToProps,
   { deleteComment }

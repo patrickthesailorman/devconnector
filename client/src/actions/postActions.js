@@ -152,3 +152,10 @@ export const setPostLoading = () => {
     type: POST_LOADING
   };
 };
+
+// Clear errors
+export const clearErrors = () => {
+  return {
+    type: CLEAR_ERRORS
+  };
+};
